@@ -37,10 +37,6 @@ public class Test2 {
                     .post("/pet")
                     .then()
                     .log().all()
-//                    .assertThat().statusCode(200)
-//                    .assertThat().time(lessThan(5000L))
-//                    .assertThat().header("content-type","application/json")
-//                    .header("connection","keep-alive")
                     .assertThat()
                     .body(matchesJsonSchemaInClasspath("addPetSchema.json"));
         }
